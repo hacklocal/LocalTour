@@ -9,17 +9,23 @@ import { HomePage } from '../pages/home/home';
 import { GoogleMaps} from "@ionic-native/google-maps";
 import {UserProfilePageModule} from "../pages/user-profile/user-profile.module";
 import {SiteDescriptionPageModule} from "../pages/site-description/site-description.module";
+import {Geolocation} from "@ionic-native/geolocation";
+import {AddmarkerpagePageModule} from "../pages/addmarkerpage/addmarkerpage.module";
+import { ElasticModule } from 'ng-elastic';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+
   ],
   imports: [
     BrowserModule,
     UserProfilePageModule,
     SiteDescriptionPageModule,
-    IonicModule.forRoot(MyApp)
+    AddmarkerpagePageModule,
+    IonicModule.forRoot(MyApp),
+    ElasticModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -30,6 +36,7 @@ import {SiteDescriptionPageModule} from "../pages/site-description/site-descript
     StatusBar,
     SplashScreen,
     GoogleMaps,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
