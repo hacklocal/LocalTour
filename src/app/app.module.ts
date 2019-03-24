@@ -6,6 +6,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { GoogleMaps} from "@ionic-native/google-maps";
+import {UserProfilePageModule} from "../pages/user-profile/user-profile.module";
+import {SiteDescriptionPageModule} from "../pages/site-description/site-description.module";
 
 @NgModule({
   declarations: [
@@ -14,6 +17,8 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
+    UserProfilePageModule,
+    SiteDescriptionPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -24,6 +29,7 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
