@@ -6,7 +6,7 @@
     ],
     "content-hash": "b1746824201eda12ba8a56818c05409d",
     "packages": [
-        {
+        { 
             "name": "arrilot/laravel-widgets",
             "version": "3.12",
             "source": {
