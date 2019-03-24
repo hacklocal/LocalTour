@@ -11,6 +11,7 @@ import {
 } from '@ionic-native/google-maps';
 import { Component } from '@angular/core';
 import {NavController, Platform} from 'ionic-angular';
+import {UserProfilePage} from "../user-profile/user-profile";
 
 @Component({
   selector: 'page-home',
@@ -70,5 +71,8 @@ export class HomePage {
     // marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
     //   alert('clicked');
     // });
+  }
+  goToProfile(){
+    this.navCtrl.push(UserProfilePage)
   }
 }

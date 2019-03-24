@@ -9,7 +9,7 @@ import {UserProfilePage} from "../pages/user-profile/user-profile";
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = UserProfilePage;
+  rootPage:any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
