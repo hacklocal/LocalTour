@@ -1,0 +1,56 @@
+<!--
+  Generated template for the AddmarkerpagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content no-padding>
+  <ion-grid no-padding class="RootGrid">
+    <!-- blocco foto -->
+    <ion-row justify-content-end align-items-end class="Photo">
+      <!--<ion-col class="TextVisited">visitato da 37 persone</ion-col>-->
+      <!--<div class="top-shadow"></div>-->
+      <img src="/assets/imgs/camera@3x.png" alt="">
+      <h4 class="text">Aggiungi almeno una foto</h4>
+    </ion-row>
+
+    <ion-row class="Rectangle">
+      <ion-col >
+        <ion-grid no-padding>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+
+                <ion-input type="text" placeholder="Titolo"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-select>
+                  <ion-option>Natura</ion-option>
+                  <ion-option>Attività</ion-option>
+                  <ion-option>Arte</ion-option>
+                  <ion-option>Edificio</ion-option>
+                </ion-select>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-item>
+            <ion-label floating>Description</ion-label>
+            <ion-textarea fz-elastic></ion-textarea>
+          </ion-item>
+          <ion-row class="bottom-row" *ngIf = "!keyboard.isOpen()">
+            <ion-col>
+              <button ion-button full color="secondary" (click)="back()"> CONFERMA </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
